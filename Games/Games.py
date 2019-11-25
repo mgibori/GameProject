@@ -1,4 +1,5 @@
-from Live import
+from Live import CallGame
+b = CallGame("aaa")
 class Games():
     def __init__(self, user_guess):
         self.user_guess = user_guess
@@ -15,6 +16,8 @@ class Games():
         else:
             answer = "Wrong, Try Again"
         print(answer)
+
+Games
 
 
 
