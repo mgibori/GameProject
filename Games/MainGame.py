@@ -1,7 +1,6 @@
-from Live import CallGame
+#from Live import CallGame
 from Games import Games
-b = CallGame("Moran")
-print(b.chosen_game)
-print(b.game_dif)
-aa = Games(b.game_dif)
-print(aa.secret_number)
+G = Games()
+if G.chosen_game == 2:
+    G.check_answer()
+elif G.chosen_game == 1:

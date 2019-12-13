@@ -1,9 +1,11 @@
-class CallGame():
+class CallGame:
     def __init__(self, name):
+
         self.name = name
+        self.name = self.name.capitalize()
         self.welcome_message = self.welcome()
         self.chosen_game = self.choose_game
-        self.game_dif= self.choose_difficulty()
+        self.game_dif = self.choose_difficulty()
 
     def welcome(self):
         name = self.name.capitalize()
@@ -19,8 +21,7 @@ class CallGame():
             if 1 <= game_choice <= 3:
                 break
             else:
-                game_choice = int(input(self.name+', which game would you like to play?\nPlease choose a number '
-                'between 1-3:'))
+                game_choice = int(input(self.name+', which game would you like to play?\nPlease choose a number between 1-3:'))
         return game_choice
 
     def choose_difficulty(self):    
