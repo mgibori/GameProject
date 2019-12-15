@@ -2,6 +2,7 @@ from Live import CallGame
 import time
 import os
 import random
+from random import randint
 cg = CallGame("aaa")
 
 
@@ -26,18 +27,22 @@ class Games():
         print(answer)
 
     def memory_numbers(self):
-        from random import randint
         mem_numbers = [randint(0, 101) for i in range(0, self.difficulty)]
-        print(mem_numbers)
-        time.sleep(0.7)
-        def clear():
-            lambda: os.system('cls')
-        clear()
         return mem_numbers
 
     def check_mem_answer(self):
-        user_guess = int(input('Please write the '+str(cg.game_dif)+' numbers '))
-        if self.memory_numbers() == user_guess:
+        print(self.memory_numbers)
+        time.sleep(0.7)
+
+        def clear():
+            lambda: os.system('cls')
+        clear()
+        print('Please write the '+str(cg.game_dif)+' numbers displayed - one at a time')
+        user_guess = list()
+        for i in range(0, int(cg.game_dif)):
+            num = int(input())
+            user_guess.append(num)
+        if self.memory_numbers == user_guess:
             answer = "Woohoo, you got it right"
         else:
             answer = "Wrong, better luck next time"

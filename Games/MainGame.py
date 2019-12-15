@@ -4,3 +4,4 @@ G = Games()
 if G.chosen_game == 2:
     G.check_answer()
 elif G.chosen_game == 1:
+    G.check_mem_answer()
