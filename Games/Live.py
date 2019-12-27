@@ -9,7 +9,8 @@ class CallGame:
 
     def welcome(self):
         name = self.name.capitalize()
-        print('Hello {Name} and welcome to the world of games \nHere you can find many cool games to play'.format(Name=name))
+        print("Hello {Name} and welcome to the world of games "
+              "\nHere you can find many cool games to play".format(Name=name))
 
     @property
     def choose_game(self):
